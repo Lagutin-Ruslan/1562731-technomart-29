@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Руслан Лагутин](https://up.htmlacademy.ru/htmlcss/29/user/1562731).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Кривокора](https://htmlacademy.ru/profile/krivokora).
 
 ---
 
