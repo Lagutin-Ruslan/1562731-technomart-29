@@ -1,0 +1,648 @@
+:root {
+--basic-red: #EE3643;
+--basic-reded: #CA2C37;
+--basic-red-dark: rgba(0, 0, 0, 0.24);
+--basic-black: #000000;
+--basic-green: #63A63E;
+--basic-grey: #3D546F; /*похож на экстра дарк*/
+--basic-greylight: #C5C5C5;
+--basic-greylight-clear: rgba(197, 197, 197, 0.3);
+--basic-greylight-dark: rgba(169, 169, 169, 0.3);
+--basic-extra-grey: #F3F7F9;
+--special-grey-other: rgba(0, 0, 0, 0.25);
+--basic-background: #F1F5F7;
+--basic-white: #FFFFFF;
+--basic-white-clear: rgba(255, 255, 255, 0.3);
+--basic-white-cleared: rgba(255, 255, 255, 0.5);
+--special-greyed: rgba(241, 245, 247, 0.5);
+--special-ylellow: #FFBF47;/*похож на ylellow-other*/
+--special-ylellow-other: #FFC047;
+--special-blue: #3BBCE3;
+--special-lilac: #DC91D8;
+--special-greenlight: #8ED78F;
+--special-yellowlight: #FFD180;
+--special-yellowed: rgba(255, 209, 128, 0.5);
+--success: #5FBB2D;
+--warning: #FFBF47;
+--error: #BA2732;
+--light-grey: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
+--shadow: #C4C4C4;
+--basic-extra-dark: #293449;
+--basic-dark:#32425C;
+--basic-dark-other: #405069;
+--basic-extra-light: #F9F5F0;
+--basic-light: rgba(0, 0, 0, 0.0001);
+--basic-very-dark: #212A3A;
+--basic-very-darked: #161D29;
+--basic-super-darked: #1D2739;
+}
+/*Header*/
+.main-header {
+  background-color: var(--basic-extra-grey);
+}
+.main-header-wrapper {
+background-color: var(--basic-extra-dark);
+}
+.main-header-logo {
+background-color: var(--basic-red);
+box-shadow: inset 0px -5px 0px var(--basic-red-dark);
+}
+.main-header-logo:active {
+  background-color: var(--error);
+}
+.main-header-search {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: var(--basic-extra-dark);
+  color: var(--basic-white);
+}
+.main-header-search:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.main-header-search:active, .main-header-tab:active, .main-header-basket:active, .main-header-link:active {
+  color: var(--basic-white-cleared);
+}
+.main-header-tab:active, .main-header-basket:active {
+  background-color: var(--basic-very-darked);
+}
+.main-header-link:active {
+  background-color: var(--basic-green);
+}
+.main-header-tab  {
+  color: var(--basic-white);
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.main-header-basket {
+  color: var(--basic-white);
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.main-header-link {
+  background-color: var(--basic-green);
+  color: var(--basic-white);
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.main-header-link:hover {
+  background-color: var(--success);
+}
+.main-header-desc {
+  font-family: Cuprum;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+}
+.contacts-phone {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+  background-color: var(--basic-extra-grey);
+  border: 3px solid #FFFFFF;
+  box-sizing: border-box;
+}
+.address {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-dark);
+}
+.modal-login {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: rgba(0, 0, 0, 0.0001);
+}
+.modal-login:hover, .modal-reg:hover {
+  color: var(--basic-red);
+}
+.modal-login:active, .modal-reg:active {
+  color: var(--basic-greylight);
+}
+.modal-reg {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-light);
+}
+.site-nav {
+  background-color: var(--basic-dark);
+  box-shadow: inset 0px -5px 0px var(--basic-extra-dark);
+}
+.site-nav>li>a {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+.site-nav>li>a:hover {
+  background-color: var(--basic-extra-dark);
+}
+.site-nav>li>a:active {
+  background-color: var(--basic-super-darked);
+  color: var(--basic-white-cleared);
+}
+
+/*Main*/
+  /*section class="product"*/
+.visibility-h {
+  visibility: hidden;
+}
+.product-item-first {
+  background-color: var(--special-ylellow);
+}
+.product-subtitle-first {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.product-link-first {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-white-clear);
+
+}
+.product-text-first {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+.product-item-second {
+  background-color: var(--special-blue);
+}
+.product-subtitle-second {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.product-link-second {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-white-clear);
+}
+.product-item-third {
+  background-color: var(--special-lilac);
+}
+.product-subtitle-third {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.product-link-third {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-white-clear);
+}
+.product-item-fourth {
+  background-color: var(--special-greenlight);
+}
+.product-subtitle-fourth {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.product-link-fourth {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-white-clear);
+}
+.product-item-fifth {
+  background-color: var(--special-ylellow-other);
+}
+.product-subtitle-fifth {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.product-link-fifth {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-white-clear);
+}
+.product-link-first:hover, .product-link-second:hover, .product-link-third:hover, .product-link-fourth:hover, .product-link-fifth:hover {
+  background-color: var(--basic-greylight-clear);
+}
+.product-link-first:active, .product-link-second:active, .product-link-third:active, .product-link-fourth:active, .product-link-fifth:active {
+  background-color: var(--basic-greylight-dark);
+}
+.product-sixth {
+  background-color: var(--special-grey-other);
+}
+.product-subtitle-sixth {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.product-subtitle-text {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+.product-link {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+.product-link:hover {
+  background-color: var(--basic-reded);
+}
+.product-link:active {
+  background-color: var(--error);
+}
+  /*section class="firms"*/
+.firms-box {
+  background-color: var(--basic-extra-light);
+}
+.firms-title {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-dark);
+  text-transform: uppercase;
+}
+.firms-link {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+}
+.firms-item {
+  background-color: var(--basic-white);
+  border: 1px solid #EAEAEA;
+  box-sizing: border-box;
+}
+/*.firms-item:hover {
+  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+  как добавить тень, если её параметров нет в макете? Написал от себя.
+}
+*/
+/*.firms-item:active {
+  как добавить прозрачность, если её параметров нет в макете?
+}
+*/
+  /*section class="services"*/
+.services {
+  background-color: var(--basic-background);
+}
+.services-title {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.services-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+.services-item-first {
+  background-color: var(--basic-dark);
+  box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--basic-dark-other);
+}
+.services-item-first {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.services-item-first:hover {
+  background-color: var(--basic-extra-dark);
+  color: var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--basic-dark-other);
+}
+.services-item-first:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-dark);
+  box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
+}
+  .services-item-second {
+  background-color: var(--basic-dark);
+  box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--basic-dark-other);
+}
+.services-item-second {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.services-item-second:hover {
+  background-color: var(--basic-extra-dark);
+  color: var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--basic-dark-other);
+}
+.services-item-second:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-dark);
+  box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
+}
+.services-item-third {
+  background-color: var(--basic-dark);
+  box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--basic-dark-other);
+}
+.services-item-third {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.services-item-third:hover {
+  background-color: var(--basic-extra-dark);
+  color: var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--basic-dark-other);
+}
+.services-item-third:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-dark);
+  box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
+}
+.services-features-subtitle {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+}
+.services-features-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+.services-features-link {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+ /*section class="aside"*/
+.aside-title {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.aside-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+.aside-item {
+  color: var(--basic-red);
+}
+.aside-item>span {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+.aside-link {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+ /*section class="contacts"*/
+.contacts-title {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.contacts-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+.contacts-link {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/*Footer*/
+.main-footer {
+  background-color: var(--basic-dark);
+}
+.main-footer-logo {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px var(--basic-red-dark);
+}
+.main-footer-address, .main-footer-phone {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-extra-grey);
+  text-decoration-line: none;
+}
+.main-footer-link {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-background);
+  text-decoration-line: none;
+}
+.main-footer-link:hover {
+  text-decoration-line: underline;
+}
+.main-footer-link:active {
+  color: var(--special-greyed);
+  text-decoration-line: none;
+}
+.main-footer-second-link {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--special-yellowlight);
+  text-decoration-line: none;
+}
+.main-footer-second-link:hover {
+  text-decoration-line: underline;
+}
+.main-footer-second-link:active {
+  color: var(--special-yellowed);
+  text-decoration-line: none;
+}
+.main-footer-wrapper {
+  background-color: var(--basic-extra-dark);
+}
+.main-footer-text {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+.socials-button {
+  background: linear-gradient(0deg, var(--basic-very-dark), var(--basic-very-dark));
+  color: var(--basic-white);
+}
+.socials-button:hover {
+  background: var(--basic-red);
+}
+.socials-button:active {
+  background: var(--basic-red);
+}
+.footer-list-text, .footer-list-text-second {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+.footer-mail, .footer-site {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--special-yellowlight);
+  text-decoration-line: none;
+}
+.footer-mail:hover, .footer-site:hover {
+  text-decoration-line: underline;
+}
+.footer-mail:active, .footer-site:active {
+  color: var(--basic-red);
+  text-decoration-line: none;
+}
