@@ -3,15 +3,20 @@
 --basic-reded: #CA2C37;
 --basic-red-dark: rgba(0, 0, 0, 0.24);
 --basic-black: #000000;
+--basic-shadow-black: rgba(0, 0, 0, 0.15);
 --basic-green: #63A63E;
+--basic-green-dark: #367315;
+--basic-greened-dark: #518534;
 --basic-grey: #3D546F; /*похож на экстра дарк*/
 --basic-greylight: #C5C5C5;
+--basic-greylight-light: #A9A9A9;
 --basic-greylight-clear: rgba(197, 197, 197, 0.3);
 --basic-greylight-dark: rgba(169, 169, 169, 0.3);
 --basic-extra-grey: #F3F7F9;
 --special-grey-other: rgba(0, 0, 0, 0.25);
 --basic-background: #F1F5F7;
 --basic-white: #FFFFFF;
+--basic-white-other: #EAEAEA;
 --basic-white-clear: rgba(255, 255, 255, 0.3);
 --basic-white-cleared: rgba(255, 255, 255, 0.5);
 --special-greyed: rgba(241, 245, 247, 0.5);
@@ -46,6 +51,7 @@ background-color: var(--basic-extra-dark);
 .main-header-logo {
 background-color: var(--basic-red);
 box-shadow: inset 0px -5px 0px var(--basic-red-dark);
+background-size: cover;
 }
 .main-header-logo:active {
   background-color: var(--error);
@@ -333,6 +339,921 @@ box-shadow: inset 0px -5px 0px var(--basic-red-dark);
 .product-link:active {
   background-color: var(--error);
 }
+
+/*section class="firms-product"*/
+    /*1 image*/
+.firms-product-box {
+  background-color: var(--basic-extra-light);
+}
+.firms-product-title {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-dark);
+  text-transform: uppercase;
+}
+.firms-product-link {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+}
+.firms-product-item {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+}
+.firms-product-first {
+  padding-top: 6px;
+  padding-left: 18px;
+}
+.firms-product-name {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+  align-items: center;
+  text-align: center;
+}
+.firms-product-price {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  align-items: center;
+  color: var(--basic-greylight-light);
+  text-align: center;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+}
+.discount-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 32px;
+  padding-top: 10px;
+}
+.discount {
+  width: 141px;
+  height: 38px;
+  align-content: center;
+  margin-bottom: 51px;
+  margin-left: 47px;
+  background-color: var(--basic-red);
+  background-image:
+  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
+  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
+}
+.button-buy {
+  height: 38px;
+  width: 135px;
+  background: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img {
+  opacity: 0.3;
+}
+.button-bookmark {
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+}
+.firms-product-button {
+  display: none;
+}
+.firms-product-item:hover .firms-product-first {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+  display: none;
+}
+.firms-product-item:hover {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+}
+.firms-product-item:hover .firms-product-button {
+  display: inline;
+}
+.firms-product-price:hover {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  align-items: center;
+  color: var(--basic-greylight-light);
+  text-align: center;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+}
+.discount-text:hover {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 32px;
+  padding-top: 10px;
+}
+.discount:hover {
+  width: 141px;
+  height: 38px;
+  align-content: center;
+  margin-bottom: 51px;
+  margin-left: 47px;
+  background-color: var(--basic-red);
+  background-image:
+  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
+  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
+}
+.button-buy:hover {
+  background: var(--success);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img:hover {
+  opacity: 0.3;
+}
+.button-bookmark:hover {
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.button-buy:active {
+  background: var(--basic-greened-dark);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img:active {
+  opacity: 0.3;
+}
+.button-bookmark:active {
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  opacity: 0.5
+}
+    /*2 image*/
+.firms-product-item {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+}
+.firms-product-second {
+  padding-top: 29px;
+  padding-left: 40px;
+}
+.firms-product-name {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+  align-items: center;
+  text-align: center;
+}
+.firms-product-price {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  align-items: center;
+  color: var(--basic-greylight-light);
+  text-align: center;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+}
+.discount-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 32px;
+  padding-top: 10px;
+}
+.discount {
+  width: 141px;
+  height: 38px;
+  align-content: center;
+  margin-bottom: 51px;
+  margin-left: 47px;
+  background-color: var(--basic-red);
+  background-image:
+  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
+  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
+}
+.button-buy {
+  height: 38px;
+  width: 135px;
+  background: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img {
+  opacity: 0.3;
+}
+.button-bookmark {
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+}
+.firms-product-button {
+  display: none;
+}
+.firms-product-item:hover .firms-product-second {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+  display: none;
+}
+.firms-product-item:hover {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+}
+.firms-product-item:hover .firms-product-button {
+  display: inline;
+}
+.firms-product-price:hover {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  align-items: center;
+  color: var(--basic-greylight-light);
+  text-align: center;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+}
+.discount-text:hover {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 32px;
+  padding-top: 10px;
+}
+.discount:hover {
+  width: 141px;
+  height: 38px;
+  align-content: center;
+  margin-bottom: 51px;
+  margin-left: 47px;
+  background-color: var(--basic-red);
+  background-image:
+  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
+  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
+}
+.button-buy:hover {
+  background: var(--success);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img:hover {
+  opacity: 0.3;
+}
+.button-bookmark:hover {
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.button-buy:active {
+  background: var(--basic-greened-dark);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img:active {
+  opacity: 0.3;
+}
+.button-bookmark:active {
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  opacity: 0.5
+}
+
+    /*3 image*/
+.firms-product-item {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+}
+.firms-product-third {
+  padding-top: 22px;
+  padding-left: 33px;
+}
+.firms-product-name {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+  align-items: center;
+  text-align: center;
+}
+.firms-product-price {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  align-items: center;
+  color: var(--basic-greylight-light);
+  text-align: center;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+}
+.discount-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 32px;
+  padding-top: 10px;
+}
+.discount {
+  width: 141px;
+  height: 38px;
+  align-content: center;
+  margin-bottom: 51px;
+  margin-left: 47px;
+  background-color: var(--basic-red);
+  background-image:
+  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
+  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
+}
+.button-buy {
+  height: 38px;
+  width: 135px;
+  background: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img {
+  opacity: 0.3;
+}
+.button-bookmark {
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+}
+.firms-product-button {
+  display: none;
+}
+.firms-product-item:hover .firms-product-third {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+  display: none;
+}
+.firms-product-item:hover {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+}
+.firms-product-item:hover .firms-product-button {
+  display: inline;
+}
+.firms-product-price:hover {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  align-items: center;
+  color: var(--basic-greylight-light);
+  text-align: center;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+}
+.discount-text:hover {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 32px;
+  padding-top: 10px;
+}
+.discount:hover {
+  width: 141px;
+  height: 38px;
+  align-content: center;
+  margin-bottom: 51px;
+  margin-left: 47px;
+  background-color: var(--basic-red);
+  background-image:
+  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
+  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
+}
+.button-buy:hover {
+  background: var(--success);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img:hover {
+  opacity: 0.3;
+}
+.button-bookmark:hover {
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.button-buy:active {
+  background: var(--basic-greened-dark);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img:active {
+  opacity: 0.3;
+}
+.button-bookmark:active {
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  opacity: 0.5
+}
+
+   /*4 image*/
+.firms-product-item {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+}
+.firms-product-fourth {
+  padding-top: 22px;
+  padding-left: 33px;
+}
+.firms-product-name {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+  align-items: center;
+  text-align: center;
+}
+.discount-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 32px;
+  padding-top: 10px;
+}
+.discount {
+  width: 141px;
+  height: 38px;
+  align-content: center;
+  margin-bottom: 51px;
+  margin-left: 47px;
+  background-color: var(--basic-red);
+  background-image:
+  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
+  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
+}
+.button-buy {
+  height: 38px;
+  width: 135px;
+  background: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img {
+  opacity: 0.3;
+}
+.button-bookmark {
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+}
+.firms-product-button {
+  display: none;
+}
+.firms-product-item:hover .firms-product-fourth {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+  display: none;
+}
+.firms-product-item:hover {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-white-other);
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+}
+.firms-product-item:hover .firms-product-button {
+  display: inline;
+}
+.firms-product-price:hover {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  align-items: center;
+  color: var(--basic-greylight-light);
+  text-align: center;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+}
+.discount-text:hover {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding-left: 32px;
+  padding-top: 10px;
+}
+.discount:hover {
+  width: 141px;
+  height: 38px;
+  align-content: center;
+  margin-bottom: 51px;
+  margin-left: 47px;
+  background-color: var(--basic-red);
+  background-image:
+  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
+  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
+}
+.button-buy:hover {
+  background: var(--success);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img:hover {
+  opacity: 0.3;
+}
+.button-bookmark:hover {
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.button-buy:active {
+  background: var(--basic-greened-dark);
+  box-shadow: inset 0px -3px 0px var(--basic-green-dark);
+  border-radius: 2px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.button-img:active {
+  opacity: 0.3;
+}
+.button-bookmark:active {
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  opacity: 0.5
+}
+
   /*section class="firms"*/
 .firms-box {
   background-color: var(--basic-extra-light);
@@ -361,15 +1282,15 @@ box-shadow: inset 0px -5px 0px var(--basic-red-dark);
   border: 1px solid #EAEAEA;
   box-sizing: border-box;
 }
-/*.firms-item:hover {
-  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-  как добавить тень, если её параметров нет в макете? Написал от себя.
+.firms-item:hover {
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
 }
-*/
-/*.firms-item:active {
-  как добавить прозрачность, если её параметров нет в макете?
+
+.firms-item:active {
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+  opacity: 0.5;
 }
-*/
+
   /*section class="services"*/
 .services {
   background-color: var(--basic-background);
