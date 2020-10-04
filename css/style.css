@@ -1210,16 +1210,50 @@ box-shadow: inset 0px -5px 0px var(--basic-red-dark);
   text-transform: uppercase;
   background-color: var(--basic-red);
 }
-.firms-item {
+.firms-list>li>div {
   background-color: var(--basic-white);
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--basic-white-other);
+  width: 220px;
+  height: 145px;
   box-sizing: border-box;
 }
-.firms-item:hover {
+.firms-list>li:nth-child(1)>div {
+  text-align: center;
+  padding-top: 54px;
+}
+.firms-list>li:nth-child(2)>div {
+  text-align: center;
+  padding-top: 50px;
+}
+.firms-list>li:nth-child(3)>div {
+  text-align: center;
+  padding-top: 48px;
+}
+.firms-list>li:nth-child(4)>div {
+  text-align: center;
+  padding-top: 34px;
+}
+.firms-list>li:nth-child(5)>div {
+  text-align: center;
+  padding-top: 58px;
+}
+.firms-list>li:nth-child(6)>div {
+  text-align: center;
+  padding-top: 36px;
+}
+.firms-list>li:nth-child(7)>div {
+  text-align: center;
+  padding-top: 24px;
+}
+.firms-list>li:nth-child(8)>div {
+  text-align: center;
+  padding-top: 34px;
+}
+.firms-list>li>div:hover {
   filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
 }
 
-.firms-item:active {
+.firms-list>li>div:active {
   filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
   opacity: 0.5;
 }
