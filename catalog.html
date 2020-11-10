@@ -8,7 +8,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
 </head>
 
 <body class="page-body">
@@ -129,8 +129,8 @@
                       <div class="scale">
                         <div class="bar"></div>
                       </div>
-                      <div class="toggle toggle-min" tabindex="0"></div>
-                      <div class="toggle toggle-max" tabindex="0"></div>
+                      <div class="toggle toggle-min" tabindex="0" aria-label="Ползунок минимум"></div>
+                      <div class="toggle toggle-max" tabindex="0" aria-label="Ползунок максимум"></div>
                     </div>
                     <div class="price-controls">
                       <label class="min-price" for="min-price">
@@ -145,80 +145,78 @@
 
                 <li class="aside-list-firms">
                   <h3 class="catalog-subtitle">Производители:</h3>
-                  <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-                    <fieldset class="filter-checkbox">
-                      <ul class="checkbox-firms" id="box-firms">
-                        <li>
-                          <input class="visually-hidden button-checkbox" type="checkbox" name="BOSCH" id="button-checkbox-bosch" checked>
-                          <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
-                            <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <label class="checkbox-label" for="button-checkbox-bosch">BOSCH</label>
-                        </li>
-                        <li>
-                          <input class="visually-hidden button-checkbox" type="checkbox" name="Интерскол" id="button-checkbox-interskol">
-                          <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <svg class="icon-checkbox-on" width="27" height="23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
-                            <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <label class="checkbox-label" for="button-checkbox-interskol">Интерскол</label>
-                        </li>
-                        <li>
-                          <input class="visually-hidden button-checkbox" type="checkbox" name="Makita" id="button-checkbox-makita" checked>
-                          <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <svg class="icon-checkbox-on" width="27" height="23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
-                            <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <label class="checkbox-label" for="button-checkbox-makita">Makita</label></li>
-                        <li>
-                          <input class="visually-hidden button-checkbox" type="checkbox" name="Dewalt" id="button-checkbox-dewalt">
-                          <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <svg class="icon-checkbox-on" width="27" height="23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
-                            <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <label class="checkbox-label" for="button-checkbox-dewalt">Dewalt</label></li>
-                        <li>
-                          <input class="visually-hidden button-checkbox" type="checkbox" name="Hitachi" id="button-checkbox-hitachi">
-                          <svg class="icon-checkbox-off" width="23" height="23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <svg class="icon-checkbox-on" width="27" height="23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
-                            <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
-                              fill="#C5C5C5" />
-                          </svg>
-                          <label class="checkbox-label" for="button-checkbox-hitachi">Hitachi</label>
-                        </li>
-                      </ul>
-                    </fieldset>
-                  </form>
+                  <fieldset class="filter-checkbox">
+                    <ul class="checkbox-firms" id="box-firms">
+                      <li>
+                        <input class="visually-hidden button-checkbox" type="checkbox" name="BOSCH" id="button-checkbox-bosch" checked>
+                        <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <svg class="icon-checkbox-on" width="27" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
+                          <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <label class="checkbox-label" for="button-checkbox-bosch">BOSCH</label>
+                      </li>
+                      <li>
+                        <input class="visually-hidden button-checkbox" type="checkbox" name="Интерскол" id="button-checkbox-interskol">
+                        <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <svg class="icon-checkbox-on" width="27" height="23" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
+                          <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <label class="checkbox-label" for="button-checkbox-interskol">Интерскол</label>
+                      </li>
+                      <li>
+                        <input class="visually-hidden button-checkbox" type="checkbox" name="Makita" id="button-checkbox-makita" checked>
+                        <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <svg class="icon-checkbox-on" width="27" height="23" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
+                          <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <label class="checkbox-label" for="button-checkbox-makita">Makita</label></li>
+                      <li>
+                        <input class="visually-hidden button-checkbox" type="checkbox" name="Dewalt" id="button-checkbox-dewalt">
+                        <svg class="icon-checkbox-off" width="23" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <svg class="icon-checkbox-on" width="27" height="23" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
+                          <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <label class="checkbox-label" for="button-checkbox-dewalt">Dewalt</label></li>
+                      <li>
+                        <input class="visually-hidden button-checkbox" type="checkbox" name="Hitachi" id="button-checkbox-hitachi">
+                        <svg class="icon-checkbox-off" width="23" height="23" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h17a3 3 0 013 3v17a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm18 3c0-.5-.5-1-1-1H3a1 1 0 00-1 1v17c0 .5.5 1 1 1h17c.5 0 1-.5 1-1V3z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <svg class="icon-checkbox-on" width="27" height="23" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.3 7.5l-2.8 2.8 7.7 7.8 14-14-2.9-2.8-11 11.1-5-5z" fill="#C5C5C5" />
+                          <path d="M21 20c0 .5-.5 1-1 1H3a1 1 0 01-1-1V3c0-.5.5-1 1-1h16.9L21.5.4A3 3 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.8l-2 2V20z"
+                            fill="#C5C5C5" />
+                        </svg>
+                        <label class="checkbox-label" for="button-checkbox-hitachi">Hitachi</label>
+                      </li>
+                    </ul>
+                  </fieldset>
                 </li>
                 <li class="aside-list-power">
                   <h3 class="catalog-subtitle">Питание:</h3>
@@ -525,7 +523,7 @@
       </div>
     </div>
   </section>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-/*Окно "как нас найти" modal-subscribe */
+/*Окно "как нас найти"*/
 const contactsLink = document.querySelector(".contacts-link"); /*кнопка открыть*/
 const modalSubscribe = document.querySelector(".modal-subscribe");/*модальное окно*/
 const modalSubscribeClose = document.querySelector(".modal-subscribe-close");/*кнопка закрыть*/
