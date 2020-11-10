@@ -219,8 +219,13 @@
 .main-header-desc-bar {
   margin: 0 auto;
   width: 960px;
-  position: relative;
   margin-top: 7px;
+}
+.main-header-desc-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 940px;
 }
 .main-header-desc {
   display: block;
@@ -238,12 +243,19 @@
 .contacts-address {
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
   flex-direction: column;
   margin: 0;
-  top: 41px;
-  left: 330px;
+  margin-top: 38px;
+  margin-left: 45px;
   width: 270px;
+}
+.contacts-address-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 270px;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 .contacts-phone {
   display: block;
@@ -253,7 +265,7 @@
   line-height: 30px;
   color: var(--basic-red);
   background-color: var(--basic-extra-grey);
-  border: 3px solid #FFFFFF;
+  border: 3px solid var(--basic-white);
   box-sizing: border-box;
   height: 45px;
   padding-top: 4px;
@@ -283,9 +295,9 @@
 }
 .modal-box {
   display: flex;
-  position: absolute;
-  top: 41px;
-  right: 10px;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-top: 40px;
 }
 .modal-login {
   display: block;
@@ -338,7 +350,7 @@
   margin: 0 auto;
   width: 960px;
   margin-bottom: 60px;
-  margin-top: 46px;
+  margin-top: 40px;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -802,17 +814,9 @@
   background-color: var(--error);
 }
 /**/
-.firms-product-item {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  min-width: 220px;
-}
 .firms-product-tool-thumb {
-  padding-top: 6px;
+  padding-top: -150px;
   padding-left: 18px;
-  opacity: 1;
 }
 .firms-product-name {
   display: block;
@@ -821,11 +825,15 @@
   font-size: 18px;
   line-height: 20px;
   color: var(--basic-black);
-  width: 185px;
-  padding-top: 2px;
+  width: 190px;
+  margin: 0;
+  padding: 0;
+  padding-top: 3px;
   padding-left: 28px;
+  text-align: center;
 }
 .firms-product-price {
+  display: block;
   font-family: PT Sans, Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -835,17 +843,20 @@
   text-align: center;
   text-decoration-line: line-through;
   text-transform: uppercase;
-}
-.firms-product-button {
-  position: relative;
-  display: none;
+  margin: 0;
+  margin-top: 11px;
+  border: 0 solid var(--basic-white);
+  width: 172px;
+  height: 18px;
+  margin-left: 24px;
 }
 .button-buy {
-  position: absolute;
+  position: relative;/*нужно для ПСЕВДОЭЛЕМЕНТА*/
+  display: block;
   margin-top: 38px;
   margin-left: 41px;
   padding-top: 10px;
-  padding-left: 10px;
+  padding-left: 54px;
   height: 38px;
   width: 135px;
   background: var(--basic-green);
@@ -869,109 +880,8 @@
   height: 15px;
   width: 15px;
 }
-.button-bookmark {
-  position: absolute;
-  margin-top: 86px;
-  margin-left: 41px;
-  padding-top: 8px;
-  border: 3px solid var(--basic-green);
-  box-sizing: border-box;
-  border-radius: 2px;
-  width: 135px;
-  height: 38px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-dark);
-  text-decoration: none;
-}
-.discount-text {
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  color: var(--basic-white);
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-}
-.discount {
-  position: absolute;
-  bottom: 21px;
-  left: 45px;
-  margin-top: 13px;
-  padding-top: 10px;
-  padding-left: 32px;
-  padding-right: 44px;
-  padding-bottom: 10px;
-  align-content: center;
-  background-image: url(../img/icon-arrow.svg);
-  background-repeat: no-repeat;
-}
-.firms-product-item:hover .firms-product-tool-thumb {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
-  display: none;
-}
-.firms-product-item:hover {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
-}
-.firms-product-item:hover .firms-product-button {
-  position: relative;
-  display: block;
-}
-.firms-product-price:hover {
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  align-items: center;
-  color: var(--basic-greylight-light);
-  text-align: center;
-  text-decoration-line: line-through;
-  text-transform: uppercase;
-}
-.discount-text:hover {
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  color: var(--basic-white);
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  padding-left: 32px;
-  padding-top: 10px;
-}
-.discount:hover {
-  position: absolute;
-  bottom: 21px;
-  left: 45px;
-  margin-top: 13px;
-  padding-top: 10px;
-  padding-left: 32px;
-  padding-right: 44px;
-  padding-bottom: 10px;
-  align-content: center;
-  background-image: url(../img/icon-arrow.svg);
-  background-repeat: no-repeat;
-}
 .button-buy:hover {
+  display: block;
   background: var(--success);
   box-shadow: inset 0 -3px 0 var(--basic-green-dark);
   border-radius: 2px;
@@ -979,31 +889,11 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  align-items: center;
-  text-align: center;
   text-transform: uppercase;
   color: var(--basic-white);
-}
-.button-img:hover {
-  opacity: 0.3;
-}
-.button-bookmark:hover {
-  border: 3px solid var(--basic-green);
-  box-sizing: border-box;
-  border-radius: 2px;
-  width: 135px;
-  height: 38px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-dark);
-  border: 3px solid var(--basic-dark);
-  box-sizing: border-box;
-  border-radius: 2px;
+  padding-top: 10px;
+  padding-left: 54px;
+  order: 1;
 }
 .button-buy:active {
   background: var(--basic-greened-dark);
@@ -1013,13 +903,64 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  align-items: center;
-  text-align: center;
+  padding-top: 10px;
+  padding-left: 54px;
   text-transform: uppercase;
   color: var(--basic-white);
 }
-.button-img:active {
-  opacity: 0.3;
+.button-bookmark {
+  display: block;
+  width: 135px;
+  margin-top: 10px;
+  margin-left: 41px;
+  padding-top: 9px;
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  text-decoration: none;
+}
+.button-bookmark:hover {
+  width: 135px;
+  height: 38px;
+  font-family: Cuprum, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-dark);
+  border: 3px solid var(--basic-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.discount-text {
+  display: block;
+  font-family: PT Sans, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+}
+.discount {
+  display: block;
+  margin-bottom: 21px;
+  margin-left: 45px;
+  margin-top: 15px;
+  padding-top: 11px;
+  padding-left: 32px;
+  padding-right: 44px;
+  padding-bottom: 10px;
+  align-content: center;
+  background-image: url(../img/icon-arrow.svg);
+  background-repeat: no-repeat;
 }
 .button-bookmark:active {
   border: 3px solid var(--basic-dark);
@@ -1042,56 +983,16 @@
 }
     /*2 image*/
 .firms-product-item {
+  position: relative;/*ЭТО ЧТОБЫ ПОВЕСИТЬ ЯРЛЫК !! NEW !!*/
   background-color: var(--basic-white);
   border: 1px solid var(--basic-white-other);
   box-sizing: border-box;
   width: 220px;
   height: 318px;
-  position: relative;
 }
 .firms-product-thumb {
   padding-top: 29px;
   padding-left: 40px;
-}
-.firms-product-name {
-  position: absolute;
-  top: 178px;
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  color: var(--basic-black);
-  align-items: center;
-  text-align: center;
-  margin: 0;
-}
-.firms-product-price {
-  position: absolute;
-  top: 228px;
-  padding-left: 78px;
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  color: var(--basic-greylight-light);
-  text-decoration-line: line-through;
-  text-transform: uppercase;
-  margin: 0;
-}
-.button-buy {
-  height: 38px;
-  width: 135px;
-  background: var(--basic-green);
-  box-shadow: inset 0 -3px 0 var(--basic-green-dark);
-  border-radius: 2px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
 }
 .button-img {
   opacity: 0.3;
@@ -1111,55 +1012,22 @@
   text-transform: uppercase;
   color: var(--basic-dark);
 }
+.slide-background {
+  display: none;
+}
 .firms-product-button {
-  display: none;
+  opacity: 0;
 }
-.firms-product-item:hover .firms-product-thumb {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
-  display: none;
+.slide-img {
+  width: 190px;
+  height: 170px;
+  margin-top: -120px;
 }
-.firms-product-item:hover {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
+.firms-product-item:hover .slide-img>img {
+  display: none;
 }
 .firms-product-item:hover .firms-product-button {
-  position: relative;
-  display: inline;
-}
-.firms-product-price:hover {
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  align-items: center;
-  color: var(--basic-greylight-light);
-  text-align: center;
-  text-decoration-line: line-through;
-  text-transform: uppercase;
-}
-.button-buy:hover {
-  background: var(--success);
-  box-shadow: inset 0 -3px 0 var(--basic-green-dark);
-  border-radius: 2px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
+  opacity: 1;
 }
 .button-img:hover {
   opacity: 0.3;
@@ -1181,19 +1049,6 @@
   border: 3px solid var(--basic-dark);
   box-sizing: border-box;
   border-radius: 2px;
-}
-.button-buy:active {
-  background: var(--basic-greened-dark);
-  box-shadow: inset 0 -3px 0 var(--basic-green-dark);
-  border-radius: 2px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
 }
 .button-img:active {
   opacity: 0.3;
@@ -1219,55 +1074,9 @@
 }
 
     /*3 image*/
-.firms-product-item {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-}
 .firms-product-thumb-tool {
   padding-top: 22px;
   padding-left: 33px;
-}
-.firms-product-name {
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  color: var(--basic-black);
-  align-items: center;
-  text-align: center;
-}
-.firms-product-price {
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  align-items: center;
-  color: var(--basic-greylight-light);
-  text-align: center;
-  text-decoration-line: line-through;
-  text-transform: uppercase;
-}
-.button-buy {
-  height: 38px;
-  width: 135px;
-  background: var(--basic-green);
-  box-shadow: inset 0 -3px 0 var(--basic-green-dark);
-  border-radius: 2px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
-}
-.button-img {
-  opacity: 0.3;
 }
 .button-bookmark {
   border: 3px solid var(--basic-green);
@@ -1283,56 +1092,6 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-dark);
-}
-.firms-product-button {
-  display: none;
-}
-.firms-product-item:hover .firms-product-thumb-tool {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
-  display: none;
-}
-.firms-product-item:hover {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
-}
-.firms-product-item:hover .firms-product-button {
-  position: relative;
-  display: inline;
-}
-.firms-product-price:hover {
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  align-items: center;
-  color: var(--basic-greylight-light);
-  text-align: center;
-  text-decoration-line: line-through;
-  text-transform: uppercase;
-}
-.button-buy:hover {
-  background: var(--success);
-  box-shadow: inset 0 -3px 0 var(--basic-green-dark);
-  border-radius: 2px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
 }
 .button-img:hover {
   opacity: 0.3;
@@ -1354,19 +1113,6 @@
   border: 3px solid var(--basic-dark);
   box-sizing: border-box;
   border-radius: 2px;
-}
-.button-buy:active {
-  background: var(--basic-greened-dark);
-  box-shadow: inset 0 -3px 0 var(--basic-green-dark);
-  border-radius: 2px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
 }
 .button-img:active {
   opacity: 0.3;
@@ -1392,41 +1138,9 @@
 }
 
    /*4 image*/
-.firms-product-item {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-}
 .firms-product-thumbTool {
   padding-top: 28px;
   padding-left: 33px;
-}
-.firms-product-name {
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  color: var(--basic-black);
-  align-items: center;
-  text-align: center;
-}
-.button-buy {
-  height: 38px;
-  width: 135px;
-  background: var(--basic-green);
-  box-shadow: inset 0 -3px 0 var(--basic-green-dark);
-  border-radius: 2px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
 }
 .button-img {
   opacity: 0.3;
@@ -1445,56 +1159,6 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-dark);
-}
-.firms-product-button {
-  display: none;
-}
-.firms-product-item:hover .firms-product-thumbTool {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
-  display: none;
-}
-.firms-product-item:hover {
-  position: relative;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-white-other);
-  box-sizing: border-box;
-  width: 220px;
-  height: 318px;
-  filter: drop-shadow(0px 4px 20px var(--basic-shadow-black));
-}
-.firms-product-item:hover .firms-product-button {
-  position: relative;
-  display: inline;
-}
-.firms-product-price:hover {
-  font-family: PT Sans, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 18px;
-  align-items: center;
-  color: var(--basic-greylight-light);
-  text-align: center;
-  text-decoration-line: line-through;
-  text-transform: uppercase;
-}
-.button-buy:hover {
-  background: var(--success);
-  box-shadow: inset 0 -3px 0 var(--basic-green-dark);
-  border-radius: 2px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
 }
 .button-img:hover {
   opacity: 0.3;
@@ -1516,19 +1180,6 @@
   border: 3px solid var(--basic-dark);
   box-sizing: border-box;
   border-radius: 2px;
-}
-.button-buy:active {
-  background: var(--basic-greened-dark);
-  box-shadow: inset 0 -3px 0 var(--basic-green-dark);
-  border-radius: 2px;
-  font-family: Cuprum, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
 }
 .button-img:active {
   opacity: 0.3;
@@ -1552,7 +1203,6 @@
   border-radius: 2px;
   opacity: 0.5
 }
-
   /*section class="firms"*/
 .firms {
   width: 960px;
@@ -1680,6 +1330,7 @@
   line-height: 24px;
   color: var(--basic-black);
   padding-top: 3px;
+  width: 410px;
 }
 .services-list-box {
   position: relative;
@@ -1939,6 +1590,7 @@
 }
 .aside-texts {
   display: block;
+  max-width: 400px;
   margin: 0;
   margin-top: 25px;
   width: 460px;
@@ -2017,6 +1669,7 @@
   color: var(--basic-black);
   margin-top: 24px;
   margin-bottom: 0;
+  width: 180px;
 }
 .contacts-map {
   display: block;
@@ -2054,7 +1707,6 @@
   width: 960px;
   margin: 0 auto;
   padding: 0 10px;
-  position: relative;
 }
 .footer-box {
   display: grid;
@@ -2083,15 +1735,26 @@
   text-decoration-line: none;
   width: 350px;
 }
+.footer-list-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 549px;
+  margin: 0;
+  padding: 0;
+  margin-left: 390px;
+  margin-top: -100px;
+}
 .main-footer-list {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  justify-content: flex-end;
-  gap: 59px;
-  position: absolute;
-  top: 20px;
-  right: 6px;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  width: 600px;
+
 }
 .main-footer-link {
   font-family: Cuprum, Arial, sans-serif;
@@ -2101,6 +1764,9 @@
   color: var(--basic-background);
   text-decoration-line: none;
   text-decoration: none;
+}
+.main-footer-link:not(:first-child) {
+  margin-left: 45px;
 }
 .main-footer-link:hover {
   text-decoration-line: underline;
@@ -2113,11 +1779,9 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  justify-content: flex-end;
-  gap: 59px;
-  position: absolute;
-  top: 80px;
-  right: 6px;
+  margin: 0;
+  padding: 0;
+  gap: 60px
 }
 .main-footer-second-link {
   font-family: Cuprum, Arial, sans-serif;
@@ -2140,7 +1804,7 @@
 }
 .main-footer-wrapper {
   margin: 0 auto;
-  margin-top: 54px;
+  margin-top: 75px;
   display: flex;
   height: 107px;
   width: 960px;
@@ -2163,6 +1827,7 @@
 }
 .main-footer-text {
   display: block;
+  width: 235px;
   margin-top: 36px;
   font-family: Cuprum, Arial, sans-serif;
   font-weight: 400;
@@ -2225,6 +1890,13 @@
 /*Модальные окна*/
 .modal-subscribe {
   display: none;
+}
+.name-mail-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
 }
 .modal-show {
   display: block;
@@ -2296,12 +1968,13 @@
   background: var(--basic-red);
 }
     /*поле Имя*/
-.username {
+.username-box {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding-left: 81px;
-  padding-top: 46px;
+  margin-top: 46px;
+}
+.username {
   font-family: Cuprum, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -2325,20 +1998,22 @@
   padding-left: 12px;
 }
     /*поле Почта*/
-.usermail {
+.usermail-box {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  position: absolute;
-  left: 320px;
-  top: 46px;
+  margin-top: 46px;
+}
+.usermail {
+  display: flex;
+  flex-wrap: wrap;
   font-family: Cuprum, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-black);
 }
-.usermail-box {
+.mail-box {
   border: 2px solid var(--basic-greylight);
   box-sizing: border-box;
   border-radius: 2px;
@@ -2373,6 +2048,7 @@
   border-radius: 2px;
   margin: 0;
   padding: 0;
+  margin-left: 80px;
   width: 460px;
   height: 114px;
   margin-top: 11px;
@@ -2549,20 +2225,22 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  position: absolute;
   right: 9px;
   top: 39px;
 }
 .modal-registered {
-  position: relative;
   width: 299px;
   height: 45px;
   padding: 0;
   margin: 0;
   background-color: var(--basic-white);
+  margin-top: 39px;
+  margin-right: -10px;
+}
+.modal-registered>a {
+  text-decoration: none;
 }
 .text-registered {
-  position: absolute;
   display: block;
   font-family: Cuprum, Arial, sans-serif;
   font-weight: 400;
@@ -2570,28 +2248,27 @@
   line-height: 21px;
   color: var(--basic-black);
   text-decoration: none;
-  left: 56px;
-  top: 12px;
+  margin-left: 56px;
+  margin-top: 12px;
 }
 .icon-account {
   display: block;
-  position: absolute;
   padding: 0;
   margin: 0;
-  left: 15px;
-  top: 13px;
+  margin-left: 16px;
+  margin-top: -20px;
 }
 .icon-account-exite {
   display: block;
-  position: absolute;
   padding: 0;
   margin: 0;
-  right: 17px;
-  top: 14px;
+  margin-left: 260px;
+  margin-top: -17px;
 }
 .orders-account {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   flex-wrap: wrap;
   width: 210px;
   margin-top: 7px;
@@ -2682,7 +2359,8 @@
   color: var(--basic-black);
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 40px;
+  margin-right: 43px;
+
 }
 .breadcrumbs-step::before {
   content: "";
@@ -2691,9 +2369,9 @@
   height: 12px;
   display: block;
   background-image: url(../img/icon-right-small.svg);
-  background-repeat: no-repeat;
-  margin-left: -20px;
-  margin-top: 3px;
+  bottom: 0;
+  margin-bottom: 2px;
+  margin-left: -25px;
 }
 .icon-home {
   background-image: url(../img/icon-home.svg);
@@ -2832,12 +2510,32 @@
   line-height: 18px;
   padding: 0;
   margin: 0;
-  padding-left: 11px;
+  padding-left: 3px;
   text-align: center;
   color: var(--basic-black);
   border: none;
   border-radius: 5px;
   background-color: var(--basic-extra-lighted);
+}
+/*убрать стрелки в Chrome*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*убрать стрелки в Firefox*/
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+/*убрать стрелки в других*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .max-price::before {
   content: "";
@@ -2982,6 +2680,7 @@
   color: var(--basic-black);
   background: var(--basic-white);
   border: 1px solid var(--special-grey);
+  margin-top: 10px;
 }
 .sort-box {
   background: var(--basic-extra-lighted);
@@ -2991,7 +2690,6 @@
   margin-top: 20px;
   margin-left: -20px;
   height: 38px;
-  position: relative;
 }
 .catalog-sort {
   font-family: PT Sans, Arial, sans-serif;
@@ -3007,9 +2705,9 @@
 }
 .parameter-sort {
   display: flex;
-  position: absolute;
-  right: 3px;
-  top: 11px;
+  justify-content: flex-end;
+  margin-left: 230px;
+  margin-top: -23px;
   width: 450px;
 }
 .catalog-firms-box {
@@ -3035,6 +2733,8 @@
   margin-top: 89px;
 }
 .catalog-subtitle-price {
+  display: block;
+  margin: 0;
   font-family: PT Sans, Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -3044,6 +2744,8 @@
   position: relative;
 }
 .catalog-subtitle {
+  display: block;
+  margin-top: 13px;
   font-family: PT Sans, Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
@@ -3060,10 +2762,15 @@
   background: var(--basic-white-other);
   top: -16px;
 }
-.filter fieldset {
+.filter-radio {
   padding: 0;
   margin: 0;
   border: none;
+}
+.filter-checkbox {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 .checkbox-label, .radio-label {
   font-family: PT Sans, Arial, sans-serif;
@@ -3090,7 +2797,7 @@
   padding-left: -8px;
 }
 .price-min {
-  margin-right: 21px;
+  margin-right: 16px;
 }
 /*активная стрелка вверх*/
 .price-show {
@@ -3308,7 +3015,7 @@
 }
 .moved-basket-text {
   display: block;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -3329,6 +3036,10 @@
   margin-top: 67px;
 }
 .modal-button-order {
+  display: block;
+  text-align: center;
+  padding: 0;
+  padding-top: 11px;
   width: 192px;
   height: 38px;
   background: var(--basic-red);
@@ -3338,8 +3049,10 @@
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
+  text-decoration: none;
   text-transform: uppercase;
   margin-top: 37px;
+
 }
 .modal-button-go {
   width: 192px;
